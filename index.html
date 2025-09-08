@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Assistante Administrative & Virtuelle – Mathilda Salem</title>
-  <meta name="description" content="Gestion administrative, relances, organisation. Antibes & à distance.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – Assistante Administrative & Virtuelle</title>
+  <meta name="description" content="Contactez Mathilda Salem pour un échange gratuit de 15 minutes. Antibes & à distance.">
   <style>
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:960px;margin:0 auto;padding:24px;line-height:1.6}
     nav a{margin-right:16px;text-decoration:none}
-    .btn{display:inline-block;padding:.6rem 1rem;border:1px solid #ddd;border-radius:6px;text-decoration:none}
-    .hero{background:#f7f7f7;padding:24px;border-radius:10px;margin-bottom:24px}
+    form input, form textarea{width:100%;max-width:520px;padding:10px;margin:6px 0}
+    button{padding:.6rem 1rem;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer}
+    .contact-card{background:#f7f7f7;padding:20px;border-radius:10px;margin-bottom:24px}
+    .whatsapp{display:inline-block;margin-top:12px;padding:10px 16px;background:#25d366;color:white;border-radius:6px;text-decoration:none}
   </style>
 </head>
 <body>
@@ -23,19 +25,28 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Libérez votre temps, je gère l’administratif</h1>
-    <p>Facturation, relances, classement, mails et tableaux — à l’heure ou au forfait. Présentiel Antibes, et à distance partout en France.</p>
-    <a class="btn" href="contact.html">Demander un appel</a>
-  </section>
+  <h1>Contact</h1>
+  <p>Échange gratuit de 15 minutes pour cerner vos besoins et proposer une solution simple.</p>
 
-  <h2>Ce que mes clients apprécient</h2>
-  <ul>
-    <li>Organisation claire & documents rangés</li>
-    <li>Relances efficaces & suivi des paiements</li>
-    <li>Routines simples pour rester à jour</li>
-  </ul>
+  <div class="contact-card">
+    <p>📍 Basée à Antibes — Disponible à distance</p>
+    <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a></p>
+    <p>📞 <a href="tel:+33763642292">07 63 64 22 92</a></p>
+    <a class="whatsapp" href="https://wa.me/33763642292" target="_blank">💬 Me contacter sur WhatsApp</a>
+  </div>
 
-  <p><a href="services.html">Voir les services</a> · <a href="qui-suis-je.html">En savoir plus</a></p>
+  <form action="mailto:mathilda.salem@outlook.com" method="post" enctype="text/plain">
+    <label>Votre email<br><input type="email" name="email" required></label>
+    <label>Message<br><textarea name="message" rows="6" required></textarea></label>
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <footer style="margin-top:40px;padding:16px;background:#f7f7f7;border-radius:10px;text-align:center">
+    <p>📍 Basée à Antibes — Disponible à distance</p>
+    <p>
+      ✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a> · 
+      📞 <a href="tel:+33763642292">07 63 64 22 92</a>
+    </p>
+  </footer>
 </body>
 </html>
