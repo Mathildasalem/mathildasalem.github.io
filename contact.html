@@ -9,7 +9,10 @@
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:960px;margin:0 auto;padding:24px;line-height:1.6}
     nav a{margin-right:16px;text-decoration:none}
     form input, form textarea{width:100%;max-width:520px;padding:10px;margin:6px 0}
-    button{padding:.6rem 1rem;border:1px solid #ddd;border-radius:6px;background:#fff}
+    button{padding:.6rem 1rem;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer}
+    .contact-card{background:#f7f7f7;padding:20px;border-radius:10px;margin-bottom:24px}
+    .whatsapp{display:inline-block;margin-top:12px;padding:10px 16px;background:#25d366;color:white;border-radius:6px;text-decoration:none}
+    footer{margin-top:40px;padding:16px;background:#f7f7f7;border-radius:10px;text-align:center}
   </style>
 </head>
 <body>
@@ -26,11 +29,12 @@
   <h1>Contact</h1>
   <p>Échange gratuit de 15 minutes pour cerner vos besoins et proposer une solution simple.</p>
 
-  <ul>
-    <li>Email : <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a></li>
-    <li>Téléphone : 07 60 85 05 95 (à adapter)</li>
-    <li>Basée à Antibes — interventions à distance possibles</li>
-  </ul>
+  <div class="contact-card">
+    <p>📍 Basée à Antibes — Disponible à distance</p>
+    <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a></p>
+    <p>📞 <a href="tel:+33763642292">07 63 64 22 92</a></p>
+    <a class="whatsapp" href="https://wa.me/33763642292" target="_blank">💬 Me contacter sur WhatsApp</a>
+  </div>
 
   <form action="mailto:mathilda.salem@outlook.com" method="post" enctype="text/plain">
     <label>Votre email<br><input type="email" name="email" required></label>
@@ -38,6 +42,12 @@
     <button type="submit">Envoyer</button>
   </form>
 
-  <p>Ou <a href="tel:+33760850595">appelez-moi</a>.</p>
+  <footer>
+    <p>📍 Basée à Antibes — Disponible à distance</p>
+    <p>
+      ✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a> · 
+      📞 <a href="tel:+33763642292">07 63 64 22 92</a>
+    </p>
+  </footer>
 </body>
 </html>
