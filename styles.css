@@ -1,39 +1,43 @@
-/* Palette douce & chaleureuse */
 :root{
-  --terracotta:#CF6A4D;
-  --moutarde:#D8A31A;
-  --majorelle:#2A5BD7;
-  --gris:#f6f6f8;
+  /* Couleurs sobres */
+  --terracotta:#C15A3C;   /* h1,h2 */
+  --majorelle:#2A5BD7;    /* h3 */
+  --gris:#f7f7f7;
   --texte:#222;
 }
 
 *{box-sizing:border-box}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--texte);
-     margin:0; line-height:1.6; background:white}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--texte);
+  margin:0; line-height:1.6; background:#fff;
+}
+
 .container{max-width:980px;margin:0 auto;padding:24px}
 
+/* Titres */
+h1,h2{color:var(--terracotta);margin:0 0 8px}
+h3{color:var(--majorelle);margin:0 0 6px}
+
+/* Header / nav / footer */
 header{background:var(--gris);border-bottom:1px solid #eee}
 .brand{font-weight:700}
 nav a{margin-right:16px;text-decoration:none;color:#333}
 nav a:hover{color:var(--majorelle)}
-
-.hero{background:linear-gradient(135deg,var(--terracotta) 0%, var(--majorelle) 100%);
-      color:white; padding:48px 0}
-.hero .inner{display:flex; gap:24px; align-items:center; flex-wrap:wrap}
-.hero img{max-width:360px; width:100%; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,.15)}
-.hero h1{margin:0 0 8px 0; font-size:2rem}
-.hero p{margin:0 0 16px 0; opacity:.95}
-
-.btn{display:inline-block; padding:.7rem 1rem; border-radius:8px; text-decoration:none; font-weight:600}
-.btn-light{background:white; color:#333}
-.btn-outline{border:2px solid white; color:white}
-
-.section{padding:32px 0}
-.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
-.card{background:var(--gris); border:1px solid #eee; border-radius:12px; padding:16px}
-
-footer{margin-top:32px; background:var(--gris); border-top:1px solid #eee}
+footer{margin-top:32px;background:var(--gris);border-top:1px solid #eee;text-align:center}
 footer .container{padding:16px}
-footer a{color:var(--majorelle); text-decoration:none}
+footer a{color:var(--majorelle);text-decoration:none}
 
-img.responsive{max-width:100%; height:auto; border-radius:10px}
+/* Boutons */
+.btn{display:inline-block;padding:.7rem 1rem;border-radius:8px;text-decoration:none;font-weight:600;border:1px solid #ddd;color:#333;background:#fff}
+
+/* HERO texte + image (pas de dégradé) */
+.hero{padding:32px 0}
+.hero .row{display:flex;gap:32px;align-items:center;flex-wrap:wrap}
+.hero-text{flex:1;min-width:260px}
+.hero-img img{max-width:320px;width:100%;border-radius:12px}
+
+/* Cartes services */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:16px}
+.card{background:var(--gris);border:1px solid #eee;border-radius:12px;padding:16px;text-align:center}
+.card img{width:56px;height:56px;object-fit:contain;margin-bottom:10px}
