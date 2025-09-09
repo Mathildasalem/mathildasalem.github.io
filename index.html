@@ -1,45 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact – Assistante Administrative & Virtuelle</title>
-  <meta name="description" content="Contactez Mathilda Salem pour un échange gratuit de 15 minutes. Antibes & à distance.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assistante Administrative & Virtuelle – Mathilda Salem</title>
+  <meta name="description" content="Gestion administrative, relances et organisation. Antibes & à distance.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <strong>Mathilda Salem</strong> — Assistante Administrative & Virtuelle
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Services</a>
-      <a href="qui-suis-je.html">Qui suis-je ?</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+      <div class="brand">Mathilda Salem — Assistante Administrative & Virtuelle</div>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <h1>Contact</h1>
-  <p>Échange gratuit de 15 minutes pour cerner vos besoins et proposer une solution simple.</p>
+  <!-- HERO : texte + image -->
+  <section class="hero">
+    <div class="container row">
+      <div class="hero-text">
+        <h1>Libérez votre temps</h1>
+        <p>Je prends en charge l’administratif : devis/factures, relances, classement, mails et tableaux — à l’heure ou au forfait.</p>
+        <a class="btn" href="contact.html">Demander un appel</a>
+      </div>
+      <div class="hero-img">
+        <!-- Remplace par ta photo -->
+        <img src="assets/portrait.jpg" alt="Mathilda Salem">
+      </div>
+    </div>
+  </section>
 
-  <div class="contact-card">
-    <p>📍 Basée à Antibes — Disponible à distance</p>
-    <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a></p>
-    <p>📞 <a href="tel:+33763642292">07 63 64 22 92</a></p>
-    <a class="whatsapp" href="https://wa.me/33763642292" target="_blank">💬 Me contacter sur WhatsApp</a>
-  </div>
+  <main class="container">
+    <section>
+      <h2>Mes services clés</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="assets/icon1.png" alt="Facturation">
+          <h3>Facturation & relances</h3>
+          <p>Devis, factures, suivi des paiements, relances cadrées.</p>
+        </div>
+        <div class="card">
+          <img src="assets/icon2.png" alt="Organisation">
+          <h3>Organisation</h3>
+          <p>Classement Drive/Dropbox, archivage, modèles prêts.</p>
+        </div>
+        <div class="card">
+          <img src="assets/icon3.png" alt="Tableaux">
+          <h3>Tableaux & suivi</h3>
+          <p>Excel/Sheets : encaissements, prévisionnel simple.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <form action="mailto:mathilda.salem@outlook.com" method="post" enctype="text/plain">
-    <label>Votre email<br><input type="email" name="email" required></label>
-    <label>Message<br><textarea name="message" rows="6" required></textarea></label>
-    <button type="submit">Envoyer</button>
-  </form>
-
-  <footer style="margin-top:40px;padding:16px;background:#f7f7f7;border-radius:10px;text-align:center">
-    <p>📍 Basée à Antibes — Disponible à distance</p>
-    <p>
-      ✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a> · 
-      📞 <a href="tel:+33763642292">07 63 64 22 92</a>
-    </p>
+  <footer>
+    <div class="container">
+      <p>📍 Basée à Antibes — Disponible à distance</p>
+      <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a> ·
+         📞 <a href="tel:+33763642292">07 63 64 22 92</a></p>
+      <p>👉 <a href="contact.html">Aller à la page Contact</a></p>
+    </div>
   </footer>
 </body>
 </html>
