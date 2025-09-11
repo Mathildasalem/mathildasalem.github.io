@@ -5,41 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact – Assistante Administrative & Virtuelle</title>
   <meta name="description" content="Contactez Mathilda Salem pour un échange gratuit de 15 minutes. Antibes & à distance.">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <strong>Mathilda Salem</strong> — Assistante Administrative & Virtuelle
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Services</a>
-      <a href="qui-suis-je.html">Qui suis-je ?</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <div class="brand">Mathilda Salem — Assistante Administrative & Virtuelle</div>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <h1>Contact</h1>
-  <p>Échange gratuit de 15 minutes pour cerner vos besoins et proposer une solution simple.</p>
+  <main class="container">
+    <section>
+      <h1>Contact</h1>
+      <p>Échange gratuit de 15 minutes pour cerner vos besoins et proposer une solution simple.</p>
 
-  <div class="contact-card">
-    <p>📍 Basée à Antibes — Disponible à distance</p>
-    <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a></p>
-    <p>📞 <a href="tel:+33763642292">07 63 64 22 92</a></p>
-    <a class="whatsapp" href="https://wa.me/33763642292" target="_blank">💬 Me contacter sur WhatsApp</a>
-  </div>
+      <div class="contact-card" style="background:#fff;padding:20px;border-radius:10px;margin:20px 0;">
+        <p>📍 Basée à Antibes — Disponible à distance</p>
+        <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a></p>
+        <p>📞 <a href="tel:+33763642292">07 63 64 22 92</a></p>
+        <p>💬 <a class="whatsapp" target="_blank" href="https://wa.me/33763642292">Me contacter sur WhatsApp</a></p>
+      </div>
 
-  <form action="mailto:mathilda.salem@outlook.com" method="post" enctype="text/plain">
-    <label>Votre email<br><input type="email" name="email" required></label>
-    <label>Message<br><textarea name="message" rows="6" required></textarea></label>
-    <button type="submit">Envoyer</button>
-  </form>
+      <!-- Formulaire simple par mail (ouvre votre logiciel de messagerie) -->
+      <form action="mailto:mathilda.salem@outlook.com" method="post" enctype="text/plain" style="max-width:520px">
+        <label>Votre nom<br><input type="text" name="name" required></label><br><br>
+        <label>Votre email<br><input type="email" name="email" required></label><br><br>
+        <label>Message<br><textarea name="message" rows="6" placeholder="Décrivez brièvement votre besoin…"></textarea></label><br><br>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+
+      <p style="margin-top:14px;font-size:.95rem;opacity:.8">
+        Astuce : si vous préférez, écrivez-moi directement à
+        <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a>
+        ou sur WhatsApp.
+      </p>
+    </section>
+  </main>
 
   <footer>
-    <p>📍 Basée à Antibes — Disponible à distance</p>
-    <p>
-      ✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a> · 
-      📞 <a href="tel:+33763642292">07 63 64 22 92</a>
-    </p>
+    <div class="container">
+      <p>📍 Basée à Antibes — Disponible à distance</p>
+      <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a> | 📞 07 63 64 22 92</p>
+      <p>👉 <a href="contact.html">Aller à la page Contact</a></p>
+    </div>
   </footer>
 </body>
 </html>
