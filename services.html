@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Services – Assistante Administrative & Virtuelle</title>
-  <meta name="description" content="Devis & factures, relances, mails, classement, tableaux — à l’heure ou au forfait, sur Antibes et à distance.">
+  <meta name="description" content="Découvrez les services de Mathilda Salem : gestion administrative, organisation et suivi.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <strong>Mathilda Salem</strong> — Assistante Administrative & Virtuelle
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Services</a>
-      <a href="qui-suis-je.html">Qui suis-je ?</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <div class="brand">Mathilda Salem — Assistante Administrative & Virtuelle</div>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <h1>Services</h1>
+  <!-- SERVICES -->
+  <main class="container">
+    <section>
+      <h1>Mes Services</h1>
+      <div class="cards">
 
-  <div class="card">
-    <h2>Gestion quotidienne</h2>
-    <ul>
-      <li>Devis, facturation, suivi paiements, <em>relances</em></li>
-      <li>Tri & classement (Drive/Dropbox), archivage</li>
-      <li>Gestion mails & agenda, prise de RDV</li>
-      <li>Mise en page, tableaux (Excel/Sheets)</li>
-    </ul>
-  </div>
+        <div class="card">
+          <img class="icon" src="assets/admin.svg" alt="Administratif">
+          <h3>Administratif</h3>
+          <p>Devis, relances, appels, gestion courrier, gestion agenda.</p>
+        </div>
 
-  <div class="card">
-    <h2>Organisation & process</h2>
-    <ul>
-      <li>Modèles (devis/factures, relances, contrats simples)</li>
-      <li>Tableaux de bord (encaissements, prévisionnel simple)</li>
-      <li>Routines & check-lists</li>
-    </ul>
-  </div>
+        <div class="card">
+          <img class="icon" src="assets/organisation.svg" alt="Organisation">
+          <h3>Organisation</h3>
+          <p>Classement Drive/Dropbox, archivage, modèles prêts.</p>
+        </div>
 
-  <div class="card">
-    <h2>Formules</h2>
-    <ul>
-      <li>À la carte — <strong>35 €/h</strong> (exemple)</li>
-      <li>Pack Découverte — <strong>4 h/mois</strong></li>
-      <li>Pack Confort — <strong>8–12 h/mois</strong></li>
-    </ul>
-    <p><a href="contact.html">Demander un devis</a></p>
-  </div>
+        <div class="card">
+          <img class="icon" src="assets/suivi.svg" alt="Tableaux & suivi">
+          <h3>Tableaux & suivi</h3>
+          <p>Excel/Sheets : encaissements, prévisionnel simple.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>📍 Basée à Antibes — Disponible à distance</p>
-    <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a> ·
-       📞 <a href="tel:+33763642292">07 63 64 22 92</a></p>
+    <div class="container">
+      <p>📍 Basée à Antibes — Disponible à distance</p>
+      <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a> | 📞 07 63 64 22 92</p>
+      <p>👉 <a href="contact.html">Aller à la page Contact</a></p>
+    </div>
   </footer>
 </body>
 </html>
