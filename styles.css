@@ -43,3 +43,26 @@ footer a{color:var(--majorelle);text-decoration:none}
   display:block;
   margin:0 auto 10px;
 }
+
+/* Cartes cliquables (liens sans soulignement) */
+.linkcard {
+  text-decoration: none;
+  color: inherit;
+  transition: transform .06s ease, box-shadow .06s ease;
+}
+.linkcard:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+
+/* Grille responsive (6 cartes) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+/* Icônes */
+.icon {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: 0 auto 10px;
+}
