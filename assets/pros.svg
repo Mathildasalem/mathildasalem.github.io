@@ -2,11 +2,9 @@
   <title>Professionnels</title>
   <!-- Fond rond terracotta -->
   <circle cx="32" cy="32" r="28" fill="#C1543C"/>
-  <!-- Fusée : blanc + contour bleu -->
+  <!-- Fusée blanche avec contour bleu -->
   <path d="M32 18 C28 24, 28 40, 32 46 C36 40, 36 24, 32 18 Z"
-        fill="#FFFFFF" stroke="#2A5BD7" stroke-width="3" stroke-linejoin="round"/>
-  <circle cx="32" cy="30" r="5" fill="#FFFFFF" stroke="#2A5BD7" stroke-width="2"/>
-  <path d="M28 40 L24 44 L28 44" fill="#FFFFFF" stroke="#2A5BD7" stroke-width="2" stroke-linejoin="round"/>
-  <path d="M36 40 L40 44 L36 44" fill="#FFFFFF" stroke="#2A5BD7" stroke-width="2" stroke-linejoin="round"/>
-  <path d="M30 46 L32 50 L34 46" fill="#FFFFFF" stroke="#2A5BD7" stroke-width="2" stroke-linejoin="round"/>
+        fill="#FFFFFF" stroke="#2A5BD7" stroke-width="3"/>
+  <circle cx="32" cy="30" r="5" fill="#FFFFFF"
+        stroke="#2A5BD7" stroke-width="2"/>
 </svg>
