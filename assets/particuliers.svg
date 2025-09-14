@@ -2,6 +2,8 @@
   <!-- Fond rond terracotta -->
   <circle cx="32" cy="32" r="28" fill="#C1543C"/>
   <!-- Maison -->
-  <path d="M20 34 L32 22 L44 34 V46 H20Z" fill="none" stroke="#2A5BD7" stroke-width="3" stroke-linejoin="round"/>
-  <rect x="26" y="38" width="12" height="8" fill="none" stroke="#2A5BD7" stroke-width="3"/>
+  <path d="M20 36 L32 24 L44 36 V48 H20Z" 
+        fill="none" stroke="#2A5BD7" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="28" y="40" width="8" height="8" 
+        fill="none" stroke="#2A5BD7" stroke-width="3"/>
 </svg>
