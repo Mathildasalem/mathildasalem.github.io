@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title">
+  <title>Particuliers</title>
   <!-- Fond rond terracotta -->
   <circle cx="32" cy="32" r="28" fill="#C1543C"/>
-  <!-- Maison -->
-  <path d="M20 36 L32 24 L44 36 V48 H20Z" 
-        fill="none" stroke="#2A5BD7" stroke-width="3" stroke-linejoin="round"/>
-  <rect x="28" y="40" width="8" height="8" 
-        fill="none" stroke="#2A5BD7" stroke-width="3"/>
+  <!-- Maison blanche avec contour bleu -->
+  <polygon points="22,34 32,24 42,34" fill="#FFFFFF"
+           stroke="#2A5BD7" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="25" y="34" width="14" height="10" fill="#FFFFFF"
+        stroke="#2A5BD7" stroke-width="3"/>
 </svg>
