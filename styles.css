@@ -225,3 +225,56 @@ h2::after {
   content: none !important;
   display: none !important;
 }
+
+/* === HERO + SERVICES en deux colonnes === */
+.hero-services{
+  display:flex;
+  align-items:center;           /* centre verticalement vs avatar */
+  gap:48px;                     /* espace entre les colonnes */
+  margin-top:24px;
+}
+.hs-left img{
+  display:block;
+  max-width:340px;              /* taille avatar */
+  width:100%;
+  height:auto;
+  border-radius:12px;
+}
+.hs-right{
+  flex:1;                       /* prend la largeur restante */
+  min-width:320px;
+}
+.hs-right h2{
+  color:var(--terracotta);
+  margin:0 0 16px;
+  text-align:left;              /* titre aligné au bloc de droite */
+}
+
+/* Cartes 2 colonnes propres */
+.cards.two{
+  display:flex;
+  gap:40px;                     /* espace entre Particuliers / Pros */
+  justify-content:flex-start;
+}
+.cards.two .card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  max-width:260px;
+}
+.cards.two .icon{
+  width:110px;
+  height:110px;
+  display:block;
+  margin-bottom:16px;           /* espace icône / titre */
+}
+
+/* Responsive : empile proprement sur mobile */
+@media (max-width:900px){
+  .hero-services{ flex-direction:column; align-items:center; }
+  .hs-left img{ max-width:280px; }
+  .hs-right{ width:100%; }
+  .hs-right h2{ text-align:center; }
+  .cards.two{ justify-content:center; gap:28px; }
+}
