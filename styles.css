@@ -91,21 +91,18 @@ footer a{ color:var(--bleu); text-decoration:none }
 }
 .btn:hover{ filter:brightness(.98) }
 
-/* =========================================================
-   HERO : texte + avatar (sans dégradé)
-   =======================================================*/
-.hero-img {
-  max-width: 320px;
-  width: 100%;
-  border-radius: 12px;
-  margin-top: 20px;   /* espace supplémentaire au-dessus */
-  margin-left: 20px;  /* espace à gauche de l’image */
+/* HERO en deux colonnes */
+.hero-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:40px;
+  margin-top:40px;
 }
-.hero-img img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+
+.hero-left{flex:1;}
+.hero-right{flex:1; text-align:center;}
+.hero-right img{max-width:250px; margin-bottom:30px;}
 /* =========================================================
 /* Bloc : À qui s’adressent mes services ? (2 cartes) */
 .cards{
