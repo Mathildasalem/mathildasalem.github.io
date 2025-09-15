@@ -184,3 +184,42 @@ footer a{ color:var(--bleu); text-decoration:none }
 .card{ display:flex; flex-direction:column; align-items:center; text-align:center; max-width:320px; }
 .icon{ width:120px; height:120px; display:block; margin:0 auto 24px; }
 @media (max-width:700px){ .cards{ flex-direction:column; gap:32px; } .icon{ width:96px; height:96px; } }
+
+/* --- Reset bande grise + titres uniformes --- */
+.section-soft{ background:none !important; border-top:0 !important; border-bottom:0 !important; padding:0; }
+
+h2{
+  position:static;
+  padding-bottom:0;
+  color:var(--terracotta);
+  text-align:center;
+  margin:30px 0 20px;
+}
+h2::after{ content:none; }
+
+/* --- 2 cartes côte à côte, icônes plus grosses et espacées --- */
+.cards.two{
+  display:flex;
+  justify-content:center;
+  gap:120px;           /* espace horizontal entre les 2 blocs */
+  margin-top:30px;
+}
+.card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  max-width:260px;
+}
+.icon{
+  width:110px;         /* icône plus grosse */
+  height:110px;
+  margin-bottom:24px;  /* espace sous l’icône */
+  display:block;
+}
+
+/* Empile sur mobile */
+@media (max-width:700px){
+  .cards.two{ flex-direction:column; gap:32px; }
+  .icon{ width:90px; height:90px; margin-bottom:18px; }
+}
