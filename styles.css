@@ -38,10 +38,14 @@ footer a{color:var(--majorelle);text-decoration:none}
 .hero-img img{max-width:320px;width:100%;border-radius:12px}
 
 .icon {
-  width:64px;
-  height:64px;
-  display:block;
-  margin:0 auto 10px;
+  width: 110px;               /* taille augmentée */
+  height: 110px;
+  margin-bottom: 24px;        /* plus d’espace sous l’icône */
+  border: 3px solid #FFFFFF;  /* liseré blanc */
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  padding: 6px;               /* espace interne autour du SVG */
+  box-sizing: border-box;
 }
 
 /* Cartes cliquables (liens sans soulignement) */
