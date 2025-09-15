@@ -20,18 +20,16 @@ body{
 
 .container{ max-width:980px; margin:0 auto; padding:24px }
 
-/* =========================================================
-   Titres
-   =======================================================*/
-/* ===================================================== */
-/*  Titres uniformes + soulignés terracotta              */
-/* ===================================================== */
+/* Titres uniformes (sans souligné résiduel) */
 h2 {
-  position: relative;
-  padding-bottom: 6px;
+  position: static;
+  padding-bottom: 0;
   color: var(--terracotta);
   text-align: center;
-  margin-bottom: 30px;
+  margin: 30px 0 20px;
+}
+h2::after {
+  content: none;
 }
 
 h2::after {
