@@ -162,3 +162,6 @@ footer a{color:var(--majorelle);text-decoration:none}
   padding: 4px;                /* espace entre le SVG et le bord */
   box-sizing: border-box;      /* garde les proportions */
 }
+
+:root { --terracotta:#C1543C; --bleu:#2A5BD7; }
+h1, h2 { color: var(--terracotta); }
