@@ -68,16 +68,20 @@ footer a{ color:var(--bleu); text-decoration:none }
 /* =========================================================
    HERO : texte + avatar (sans dégradé)
    =======================================================*/
-.hero{ padding:32px 0 }
-.hero_row{ 
-  display:flex; gap:32px; align-items:center; flex-wrap:wrap;
+.hero-img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;   /* espace supplémentaire au-dessus */
+  margin-left: 20px;  /* espace à gauche de l’image */
 }
-.hero-text{ flex:1; min-width:260px }
-.hero-img{ max-width:320px; width:100%; border-radius:12px }
-.hero-img img{ display:block; width:100%; height:auto }
-
+.hero-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 /* =========================================================
-/* Bloc : À qui s’adresse mon aide ? (2 cartes) */
+/* Bloc : À qui s’adressent mes services ? (2 cartes) */
 .cards{
   display:flex;
   justify-content:center;
