@@ -47,6 +47,13 @@ footer a{color:var(--majorelle);text-decoration:none}
   padding: 6px;               /* espace interne autour du SVG */
   box-sizing: border-box;
 }
+@media (max-width: 700px) {
+  .icon {
+    width: 90px;      /* un peu plus petit sur mobile */
+    height: 90px;
+    margin-bottom: 20px;
+  }
+}
 
 /* Cartes cliquables (liens sans soulignement) */
 .linkcard {
