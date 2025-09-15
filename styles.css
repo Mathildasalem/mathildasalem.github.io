@@ -90,3 +90,53 @@ footer a{color:var(--majorelle);text-decoration:none}
   height: 80px;
   margin-bottom: 12px;
 }
+
+/* Layout desktop (déjà en place) */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 220px;
+}
+.icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+}
+
+/* Hover doux (optionnel) */
+.card:hover { transform: translateY(-2px); transition: .15s ease; }
+
+/* ✅ Responsive mobile */
+@media (max-width: 700px) {
+  .cards {
+    flex-direction: column;         /* empile les 2 blocs */
+    align-items: center;            /* centre la colonne */
+    gap: 28px;                      /* espace vertical entre les blocs */
+    margin-top: 20px;
+  }
+  .card {
+    max-width: 320px;               /* un peu plus large sur mobile */
+    padding: 0 12px;
+  }
+  .icon {
+    width: 72px;                    /* icône un poil plus petite */
+    height: 72px;
+    margin-bottom: 10px;
+  }
+  .card h3 { font-size: 1.05rem; margin: 6px 0 4px; }
+  .card p  { font-size: .98rem;    line-height: 1.4; }
+}
+
+/* ✅ Très petit écran (optionnel) */
+@media (max-width: 380px) {
+  .icon { width: 64px; height: 64px; }
+  .card { max-width: 100%; }
+}
