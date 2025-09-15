@@ -64,29 +64,27 @@ footer a{ color:var(--bleu); text-decoration:none }
 .hero-img img{ display:block; width:100%; height:auto }
 
 /* =========================================================
-   Bloc : À qui s’adresse mon aide ? (2 cartes)
-   =======================================================*/
+/* Bloc : À qui s’adresse mon aide ? (2 cartes) */
 .cards{
   display:flex;
   justify-content:center;
   align-items:flex-start;
-  gap:100px;            /* espace horizontal entre les 2 blocs */
-  margin-top:60px;
+  gap:120px;          /* ← espace horizontal entre les 2 blocs (était 100) */
+  margin-top:70px;    /* ← espace au-dessus */
 }
 .card{
   display:flex;
   flex-direction:column;
   align-items:center;
   text-align:center;
-  max-width:320px;      /* largeur confortable pour le texte */
+  max-width:340px;    /* un peu plus large pour aérer le texte */
 }
-.icon{                 /* appliqué au <img class="icon" ...> */
-  width:120px; 
-  height:120px;
+.icon{                 /* image SVG ronde (maison / mallette) */
+  width:140px;        /* ← taille de l’icône (était 120) */
+  height:140px;
   display:block;
-  margin-bottom:28px;   /* espace icône -> texte */
+  margin-bottom:28px; /* espace icône → textes */
 }
-
 /* petit hover doux sur l'ensemble du bloc */
 .card:hover{ transform:translateY(-2px); transition:.15s ease }
 
