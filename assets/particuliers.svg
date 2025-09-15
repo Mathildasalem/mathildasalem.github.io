@@ -1,8 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Fond rond terracotta -->
-  <circle cx="32" cy="32" r="30" fill="#C1543C"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title>Particuliers</title>
+  <desc>Icône maison, fond terracotta, contours bleus</desc>
+  <!-- Cercle de fond -->
+  <circle cx="32" cy="32" r="28" fill="#C1543C" stroke="#2A5BD7" stroke-width="3"/>
   <!-- Maison -->
-  <path d="M20 34 L32 22 L44 34 V48 H36 V38 H28 V48 H20 Z"
-        fill="#FFFFFF" stroke="#2A5BD7" stroke-width="3"
-        stroke-linejoin="round"/>
+  <g fill="#FFFFFF" stroke="#2A5BD7" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Toit -->
+    <path d="M20 30 L32 20 L44 30" />
+    <!-- Corps de la maison -->
+    <rect x="22" y="30" width="20" height="16" rx="2" ry="2"/>
+    <!-- Porte -->
+    <rect x="30" y="36" width="6" height="10" rx="1" ry="1"/>
+  </g>
 </svg>
