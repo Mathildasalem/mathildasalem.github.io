@@ -140,3 +140,14 @@ footer a{color:var(--majorelle);text-decoration:none}
   .icon { width: 64px; height: 64px; }
   .card { max-width: 100%; }
 }
+
+.icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+  border: 3px solid #FFFFFF;   /* liseré blanc */
+  border-radius: 50%;          /* arrondi parfait */
+  background-color: #FFFFFF;   /* fond neutre derrière le SVG */
+  padding: 4px;                /* espace entre le SVG et le bord */
+  box-sizing: border-box;      /* garde les proportions */
+}
