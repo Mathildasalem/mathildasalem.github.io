@@ -1,9 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Fond rond terracotta -->
-  <circle cx="32" cy="32" r="30" fill="#C1543C"/>
-  <!-- Fusée -->
-  <path d="M32 16 C36 22, 40 28, 32 44 C24 28, 28 22, 32 16 Z"
-        fill="#FFFFFF" stroke="#2A5BD7" stroke-width="3"
-        stroke-linejoin="round"/>
-  <circle cx="32" cy="28" r="4" fill="#FFFFFF" stroke="#2A5BD7" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title>Professionnels</title>
+  <desc>Icône mallette, fond terracotta, contours bleus</desc>
+  <!-- Cercle de fond -->
+  <circle cx="32" cy="32" r="28" fill="#C1543C" stroke="#2A5BD7" stroke-width="3"/>
+  <!-- Mallette -->
+  <g fill="#FFFFFF" stroke="#2A5BD7" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Poignée -->
+    <path d="M26 24 h12 a2 2 0 0 1 2 2 v2 h-16 v-2 a2 2 0 0 1 2-2 z"/>
+    <!-- Corps -->
+    <rect x="18" y="28" width="28" height="18" rx="3" ry="3"/>
+    <!-- Fermeture horizontale -->
+    <line x1="18" y1="36" x2="46" y2="36"/>
+    <!-- Boucle/loquet -->
+    <rect x="30" y="34" width="4" height="4" rx="1" ry="1"/>
+  </g>
 </svg>
