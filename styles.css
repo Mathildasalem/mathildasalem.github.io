@@ -1,189 +1,140 @@
+/* =========================================================
+   Mathilda Salem — Styles globaux (v1 clean)
+   Couleurs & base
+   =======================================================*/
 :root{
-  /* Couleurs sobres */
-  --terracotta:#C15A3C;   /* h1,h2 */
-  --majorelle:#2A5BD7;    /* h3 */
-  --gris:#f7f7f7;
-  --texte:#222;
+  --terracotta:#C1543C;   /* titres, accents */
+  --bleu:#2A5BD7;         /* sous-titres, pictos contour */
+  --gris:#f7f7f7;         /* fonds doux / cartes */
+  --texte:#222;           /* texte par défaut */
 }
 
 *{box-sizing:border-box}
+html,body{margin:0;padding:0}
 body{
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color:var(--texte);
-  margin:0; line-height:1.6; background:#fff;
+  line-height:1.6;
+  background:#fff;
 }
 
-.container{max-width:980px;margin:0 auto;padding:24px}
+.container{ max-width:980px; margin:0 auto; padding:24px }
 
-/* Titres */
-h1,h2{color:var(--terracotta);margin:0 0 8px}
-h3{color:var(--majorelle);margin:0 0 6px}
+/* =========================================================
+   Titres
+   =======================================================*/
+h1,h2{ color:var(--terracotta); margin:0 0 8px }
+h3{ color:var(--bleu); margin:0 0 6px }
 
-/* Header / nav / footer */
-header{background:var(--gris);border-bottom:1px solid #eee}
-.brand{font-weight:700}
-nav a{margin-right:16px;text-decoration:none;color:#333}
-nav a:hover{color:var(--majorelle)}
-footer{margin-top:32px;background:var(--gris);border-top:1px solid #eee;text-align:center}
-footer .container{padding:16px}
-footer a{color:var(--majorelle);text-decoration:none}
+/* =========================================================
+   Header / nav / footer
+   =======================================================*/
+header{ background:var(--gris); border-bottom:1px solid #eee }
+.brand{ font-weight:700 }
+nav a{ margin-right:16px; text-decoration:none; color:#333 }
+nav a:hover{ color:var(--bleu) }
+footer{ margin-top:32px; background:var(--gris); border-top:1px solid #eee }
+footer .container{ padding:16px }
+footer a{ color:var(--bleu); text-decoration:none }
 
-/* Boutons */
-.btn{display:inline-block;padding:.7rem 1rem;border-radius:8px;text-decoration:none;font-weight:600;border:1px solid #ddd;color:#333;background:#fff}
-
-/* HERO texte + image (pas de dégradé) */
-.hero{padding:32px 0}
-.hero .row{display:flex;gap:32px;align-items:center;flex-wrap:wrap}
-.hero-text{flex:1;min-width:260px}
-.hero-img img{max-width:320px;width:100%;border-radius:12px}
-
-.icon {
-  width: 110px;               /* taille augmentée */
-  height: 110px;
-  margin-bottom: 24px;        /* plus d’espace sous l’icône */
-  border: 3px solid #FFFFFF;  /* liseré blanc */
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  padding: 6px;               /* espace interne autour du SVG */
-  box-sizing: border-box;
+/* =========================================================
+   Boutons
+   =======================================================*/
+.btn{
+  display:inline-block;
+  padding:.7rem 1rem;
+  border-radius:8px;
+  border:1px solid #ddd;
+  font-weight:600;
+  color:#fff;
+  background:var(--terracotta);
+  text-decoration:none;
 }
-@media (max-width: 700px) {
-  .icon {
-    width: 90px;      /* un peu plus petit sur mobile */
-    height: 90px;
-    margin-bottom: 20px;
-  }
+.btn:hover{ filter:brightness(.98) }
+
+/* =========================================================
+   HERO : texte + avatar (sans dégradé)
+   =======================================================*/
+.hero{ padding:32px 0 }
+.hero_row{ 
+  display:flex; gap:32px; align-items:center; flex-wrap:wrap;
+}
+.hero-text{ flex:1; min-width:260px }
+.hero-img{ max-width:320px; width:100%; border-radius:12px }
+.hero-img img{ display:block; width:100%; height:auto }
+
+/* =========================================================
+   Bloc : À qui s’adresse mon aide ? (2 cartes)
+   =======================================================*/
+.cards{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:100px;            /* espace horizontal entre les 2 blocs */
+  margin-top:60px;
+}
+.card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  max-width:320px;      /* largeur confortable pour le texte */
+}
+.icon{                 /* appliqué au <img class="icon" ...> */
+  width:120px; 
+  height:120px;
+  display:block;
+  margin-bottom:28px;   /* espace icône -> texte */
 }
 
-/* Cartes cliquables (liens sans soulignement) */
-.linkcard {
-  text-decoration: none;
-  color: inherit;
-  transition: transform .06s ease, box-shadow .06s ease;
-}
-.linkcard:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+/* petit hover doux sur l'ensemble du bloc */
+.card:hover{ transform:translateY(-2px); transition:.15s ease }
 
-/* Grille responsive (6 cartes) */
-.cards {
-  display: grid;
+/* Accroches sous les titres des cartes */
+.card h3{ margin:8px 0 6px }
+.card p{ margin:0; line-height:1.5 }
+
+/* =========================================================
+   Cartes Services (si tu en remets 3 à 6 sur une page)
+   =======================================================*/
+.cards.grid{
+  display:grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 16px;
+  gap:16px;
+  margin-top:30px;
+}
+.card.tile{
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:10px;
+  padding:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+.linkcard{ text-decoration:none; color:inherit }
+.linkcard:hover{ transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,.06); transition:.06s ease }
+
+/* =========================================================
+   Responsif
+   =======================================================*/
+/* Tablette */
+@media (max-width: 900px){
+  .cards{ gap:60px }
+  .icon{ width:110px; height:110px; margin-bottom:24px }
+}
+/* Smartphone : les 2 cartes passent en colonne */
+@media (max-width: 700px){
+  .hero_row{ gap:20px }
+  .cards{ flex-direction:column; align-items:center; gap:28px; margin-top:24px }
+  .card{ max-width:360px; padding:0 12px }
+  .icon{ width:100px; height:100px; margin-bottom:20px }
+}
+/* Très petit écran */
+@media (max-width: 380px){
+  .icon{ width:88px; height:88px; margin-bottom:16px }
 }
 
-/* Icônes */
-.icon {
-  width: 64px;
-  height: 64px;
-  display: block;
-  margin: 0 auto 10px;
-}
-
-/* Section "À qui s’adresse mon aide ?" */
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 60px;              /* espace horizontal entre les 2 blocs */
-  margin-top: 30px;
-}
-
-/* Chaque bloc (Particuliers / Pros) */
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;    /* centre icône + texte */
-  text-align: center;     /* centre le texte */
-  max-width: 220px;       /* largeur raisonnable */
-}
-
-/* Icônes rondes */
-.icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 12px;
-}
-
-/* Layout desktop (déjà en place) */
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-top: 30px;
-}
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 220px;
-}
-.icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 12px;
-}
-
-/* Hover doux (optionnel) */
-.card:hover { transform: translateY(-2px); transition: .15s ease; }
-
-/* ✅ Responsive mobile */
-@media (max-width: 700px) {
-  .cards {
-    flex-direction: column;         /* empile les 2 blocs */
-    align-items: center;            /* centre la colonne */
-    gap: 28px;                      /* espace vertical entre les blocs */
-    margin-top: 20px;
-  }
-  .card {
-    max-width: 320px;               /* un peu plus large sur mobile */
-    padding: 0 12px;
-  }
-  .icon {
-    width: 72px;                    /* icône un poil plus petite */
-    height: 72px;
-    margin-bottom: 10px;
-  }
-  .card h3 { font-size: 1.05rem; margin: 6px 0 4px; }
-  .card p  { font-size: .98rem;    line-height: 1.4; }
-}
-
-/* ✅ Très petit écran (optionnel) */
-@media (max-width: 380px) {
-  .icon { width: 64px; height: 64px; }
-  .card { max-width: 100%; }
-}
-
-.icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 12px;
-  border: 3px solid #FFFFFF;   /* liseré blanc */
-  border-radius: 50%;          /* arrondi parfait */
-  background-color: #FFFFFF;   /* fond neutre derrière le SVG */
-  padding: 4px;                /* espace entre le SVG et le bord */
-  box-sizing: border-box;      /* garde les proportions */
-}
-
-:root { --terracotta:#C1543C; --bleu:#2A5BD7; }
-h1, h2 { color: var(--terracotta); }
-
-/* Section 2 blocs (Particuliers / Pros) */
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 80px;              /* espace horizontal entre les deux blocs */
-  margin-top: 40px;
-}
-
-.card {
-  text-align: center;     /* centre texte + icône */
-  max-width: 220px;       /* largeur max d’un bloc */
-}
-
-.icon {
-  width: 90px;            /* taille de l’icône */
-  height: 90px;
-  margin-bottom: 20px;    /* espace entre icône et texte */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* =========================================================
+   Petits utilitaires (si besoin)
+   =======================================================*/
+.center{ text-align:center }
+.mt-0{ margin-top:0 } .mt-8{ margin-top:8px } .mt-16{ margin-top:16px } .mt-24{ margin-top:24px }
