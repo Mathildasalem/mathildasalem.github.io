@@ -165,3 +165,25 @@ footer a{color:var(--majorelle);text-decoration:none}
 
 :root { --terracotta:#C1543C; --bleu:#2A5BD7; }
 h1, h2 { color: var(--terracotta); }
+
+/* Section 2 blocs (Particuliers / Pros) */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 80px;              /* espace horizontal entre les deux blocs */
+  margin-top: 40px;
+}
+
+.card {
+  text-align: center;     /* centre texte + icône */
+  max-width: 220px;       /* largeur max d’un bloc */
+}
+
+.icon {
+  width: 90px;            /* taille de l’icône */
+  height: 90px;
+  margin-bottom: 20px;    /* espace entre icône et texte */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
