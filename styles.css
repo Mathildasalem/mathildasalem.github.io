@@ -871,3 +871,15 @@ body > section.trustbar {
     padding-right: 60px !important;
   }
 }
+
+/* =======================================
+   HOTFIX marges latérales XXL (80px)
+   ======================================= */
+
+body > section.hero-two-col,
+body > section.trustbar,
+body > footer {
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  box-sizing: border-box;
+}
