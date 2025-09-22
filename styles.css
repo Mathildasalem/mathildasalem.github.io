@@ -416,3 +416,31 @@ h2::after {
   width: 64px !important;   /* ajuste 56–72px selon ton goût */
   height: auto !important;
 }
+
+/* Titre/bouton un peu plus compacts */
+.hero-left h1{
+  font-size: clamp(26px, 3vw, 34px);
+  margin: 0 0 10px;
+  line-height: 1.15;
+}
+.hero-left p{ margin: 0 0 14px; color: #444; }
+.btn-primary{ margin-bottom: 14px; }
+
+/* Avatar un poil plus petit */
+.hero-figure img{
+  max-width: 320px !important;
+}
+
+/* Meilleur alignement vertical des deux colonnes */
+.hero-two-col{
+  align-items: start;
+}
+
+/* Grille : si tu gardes 3 cartes */
+.audience-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 22px;
+}
+/* Si tu passes à 2 cartes, remplace la règle ci-dessus par : */
+/* .audience-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } */
