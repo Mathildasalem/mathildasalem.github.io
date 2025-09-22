@@ -900,3 +900,22 @@ body > footer {
     margin-right: 20px;
   }
 }
+
+/* ===============================
+   Alignement global basé sur page-container
+   =============================== */
+.page-container > section,
+.page-container > footer {
+  margin-left: 80px;
+  margin-right: 80px;
+  box-sizing: border-box;
+}
+
+/* Responsive : marges réduites sur mobile */
+@media (max-width: 768px) {
+  .page-container > section,
+  .page-container > footer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
