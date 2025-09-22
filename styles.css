@@ -764,3 +764,35 @@ footer a{ color:#b24e37; text-decoration:none; }
   padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
+
+/* Centrer le wrapper du header même si un style inline traîne */
+header .container{
+  display: flex;
+  justify-content: center !important;   /* écrase le space-between inline */
+  align-items: center;
+  padding: 10px 16px;
+  gap: 0;
+}
+
+/* NAV centré, en gras, en "cellules" (pills) */
+.topnav{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.topnav a{
+  font-weight: 700;               /* gras */
+  text-decoration: none;
+  color: #1f1f1f;
+  padding: 8px 12px;              /* cellule */
+  border-radius: 999px;           /* pill */
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  line-height: 1;
+  transition: background .15s ease, border-color .15s ease, transform .06s ease;
+}
+.topnav a:hover{
+  background: #fff1ea;            /* terracotta très clair */
+  border-color: #f1e1d9;
+  transform: translateY(-1px);
+}
