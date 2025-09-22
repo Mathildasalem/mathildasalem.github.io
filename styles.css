@@ -400,3 +400,19 @@ h2::after {
   margin: 0;
   padding: 0;
 }
+
+/* --- Nettoyage icônes : garder la couleur d'origine (terracotta) --- */
+.audience-icon{
+  margin: 0 auto 10px;
+  display: block;
+  background: transparent !important;
+  outline: none !important;
+  border: 0 !important;
+  width: auto;
+  height: auto;
+}
+.audience-icon img{
+  display: block;
+  width: 64px !important;   /* ajuste 56–72px selon ton goût */
+  height: auto !important;
+}
