@@ -841,3 +841,33 @@ footer{            padding-left: var(--page-pad); padding-right: var(--page-pad)
 
 /* (optionnel) si un style quelque part enlève le padding des sections */
 section{ box-sizing: border-box; }
+
+/* =======================================
+   HOTFIX marge latérale + responsive
+   ======================================= */
+
+/* Par défaut (mobiles/tablettes) */
+body > section.hero-two-col,
+body > section.trustbar {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  box-sizing: border-box;
+}
+
+/* Écrans moyens (≥ 768px) */
+@media (min-width: 768px) {
+  body > section.hero-two-col,
+  body > section.trustbar {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+}
+
+/* Grands écrans (≥ 1200px) */
+@media (min-width: 1200px) {
+  body > section.hero-two-col,
+  body > section.trustbar {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
+}
