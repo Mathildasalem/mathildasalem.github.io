@@ -514,3 +514,79 @@ footer a { color: #b24e37; text-decoration: none; }
 
 .contact-mini { margin-top: 18px; font-size: 0.98rem; }
 .contact-mini p { margin: 6px 0; }
+
+/* === HERO mise en page === */
+.hero-two-col{
+  display:grid;
+  grid-template-columns: 1fr 1.1fr; /* un poil plus de place à droite */
+  gap: 48px;
+  align-items:start;
+  max-width: 1100px;
+  margin: 36px auto 56px;
+  padding: 0 16px;
+}
+
+/* Titre + texte + bouton left */
+.hero-left h1{
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+.hero-left p{
+  margin: 0 0 14px;
+  color: #4b4b4b;
+}
+.hero-figure{ margin: 10px 0 12px; }
+.hero-figure img{
+  display:block;
+  width:100%;
+  max-width: 320px !important;
+  height:auto;
+  border-radius: 8px;
+}
+.btn-primary{
+  display:inline-block;
+  margin-top: 6px;
+  padding:12px 18px;
+  border-radius:8px;
+  background:#c85f45;
+  color:#fff; text-decoration:none; font-weight:600;
+  transition: transform .12s ease, opacity .2s ease;
+}
+.btn-primary:hover{ transform: translateY(-1px); opacity:.95; }
+
+/* === Panneau de droite === */
+.audience-panel{ align-self:start; padding-top: 8px; max-width: 560px; }
+.audience-panel h2{ margin: 0 0 12px; color:#b24e37; }
+
+/* Icônes + cartes : PLUS GRANDES + PLUS ESPACÉES (2 colonnes) */
+.audience-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 36px 44px;  /* vertical / horizontal */
+  justify-items: center;
+}
+.audience-card{ max-width: 280px; text-align:center; transition: transform .12s ease; }
+.audience-card:hover{ transform: translateY(-2px); }
+
+.audience-icon{ margin:0 auto 10px; display:block; background:transparent !important; border:0 !important; outline:none !important; }
+.audience-icon img{ display:block; width: 84px !important; height:auto !important; } /* 80–88px OK */
+.audience-card h3{ margin:6px 0 6px; font-weight:700; }
+.audience-card p{ margin:0; line-height:1.45; color:#565656; }
+
+/* Retirer toute puce résiduelle */
+.audience-panel ul, .audience-panel li{ list-style:none; margin:0; padding:0; }
+
+/* === Footer centré en bas === */
+footer{ text-align:center; padding: 28px 16px; border-top:1px solid #eee; background:#f9f7f6; }
+footer .container{ max-width: 900px; margin: 0 auto; }
+footer p{ margin: 6px 0; }
+footer a{ color:#b24e37; text-decoration:none; }
+
+/* === Responsive === */
+@media (max-width: 900px){
+  .hero-two-col{ grid-template-columns:1fr; gap:28px; }
+  .audience-panel{ max-width: 100%; }
+  .audience-grid{ grid-template-columns: 1fr; gap: 22px; }
+  .hero-figure img{ max-width: 340px !important; } /* un peu + grand sur mobile si tu veux */
+}
