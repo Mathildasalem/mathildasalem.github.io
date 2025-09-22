@@ -796,3 +796,17 @@ header .container{
   border-color: #f1e1d9;
   transform: translateY(-1px);
 }
+
+/* Header aligné à gauche mais avec marges */
+header .container{
+  max-width: 1100px;        /* largeur max (comme ton contenu principal) */
+  margin: 0 auto;           /* centre le conteneur global */
+  padding: 10px 32px;       /* ajoute une marge interne à gauche et à droite */
+  text-align: left;
+}
+
+.topnav{
+  display: flex;
+  justify-content: flex-start;  /* tout à gauche */
+  gap: 22px;                     /* espace entre les liens */
+}
