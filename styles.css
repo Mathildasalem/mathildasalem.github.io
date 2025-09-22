@@ -511,3 +511,6 @@ footer {
   color: #555;
 }
 footer a { color: #b24e37; text-decoration: none; }
+
+.contact-mini { margin-top: 18px; font-size: 0.98rem; }
+.contact-mini p { margin: 6px 0; }
