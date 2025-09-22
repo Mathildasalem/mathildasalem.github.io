@@ -495,3 +495,19 @@ h2::after {
   .audience-grid { grid-template-columns: 1fr; gap: 20px; }
   .audience-panel { max-width: 100%; }
 }
+
+.audience-icon img {
+  width: 80px !important;
+}
+.audience-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+footer {
+  text-align: center;
+  padding: 24px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+footer a { color: #b24e37; text-decoration: none; }
