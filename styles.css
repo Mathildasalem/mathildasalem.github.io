@@ -827,3 +827,17 @@ main, section, footer {
     padding-right: 40px;
   }
 }
+
+/* ===== Padding latéral global (empêche que ça colle au bord) ===== */
+:root{
+  --page-pad: clamp(16px, 4vw, 36px);
+}
+
+/* Appliquer aux sections clés */
+header .container{ padding-left: var(--page-pad); padding-right: var(--page-pad); }
+.hero-two-col{     padding-left: var(--page-pad) !important; padding-right: var(--page-pad) !important; }
+.trustbar{         margin-left: var(--page-pad);  margin-right: var(--page-pad); }
+footer{            padding-left: var(--page-pad); padding-right: var(--page-pad); }
+
+/* (optionnel) si un style quelque part enlève le padding des sections */
+section{ box-sizing: border-box; }
