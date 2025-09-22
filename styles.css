@@ -919,3 +919,31 @@ body > footer {
     margin-right: 20px;
   }
 }
+
+/* ======= GUTTER GLOBAL (aligne TOUT) ======= */
+:root { --gutter: 80px; }                  /* marge côté gauche/droit sur desktop */
+@media (max-width: 768px){ :root { --gutter: 20px; } }  /* marge sur mobile/tablette */
+
+/* applique le gutter à toute la page */
+html, body { margin:0; }
+body {
+  padding-left: var(--gutter) !important;
+  padding-right: var(--gutter) !important;
+  box-sizing: border-box;
+}
+
+/* on neutralise les anciens paddings/marges pour éviter les doubles décalages */
+header .container,
+.page-container,
+.page-container > section,
+.page-container > footer,
+.hero-two-col,
+.trustbar,
+.audience-panel,
+footer {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
