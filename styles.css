@@ -810,3 +810,20 @@ header .container{
   justify-content: flex-start;  /* tout à gauche */
   gap: 22px;                     /* espace entre les liens */
 }
+
+/* ===== MARGES GLOBALES SUR LE CONTENU ===== */
+body {
+  margin: 0; /* on garde le contrôle */
+}
+
+main, section, footer {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 1200px) {
+  main, section, footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
