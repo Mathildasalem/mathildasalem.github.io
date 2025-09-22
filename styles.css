@@ -458,3 +458,40 @@ h2::after {
   height: auto !important;
 }
 .audience-card h3{ font-size: 1.05rem; }
+
+/* 1) Supprimer toute puce résiduelle dans le panneau de droite */
+.audience-panel ul,
+.audience-panel li { list-style: none; margin: 0; padding: 0; }
+
+/* 2) Ajuster l’alignement vertical + taille de la colonne droite */
+.hero-two-col { align-items: start; }
+.audience-panel { align-self: start; padding-top: 8px; max-width: 520px; }
+
+/* 3) Grille : 2 cartes équilibrées, un peu plus d’air */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));  /* 2 colonnes */
+  gap: 28px 32px;                                   /* vertical / horizontal */
+}
+
+/* 4) Typo/espaces : titre, paragraphe, bouton, cartes */
+.hero-left h1 { font-size: clamp(26px, 3vw, 34px); margin: 0 0 10px; }
+.hero-left p  { margin: 0 0 14px; color: #4b4b4b; }
+.btn-primary  { margin-bottom: 16px; }
+
+.audience-panel h2 { margin: 0 0 10px; color: #b24e37; }
+.audience-card h3 { margin: 6px 0 6px; font-weight: 700; }
+.audience-card p  { margin: 0; line-height: 1.45; color: #565656; }
+
+/* 5) Icônes : garder tes couleurs terracotta, taille homogène */
+.audience-icon { margin: 0 auto 10px; display: block; background: transparent !important; outline: none !important; border: 0 !important; }
+.audience-icon img { display: block; width: 64px !important; height: auto !important; }
+
+/* 6) Avatar un chouïa plus compact */
+.hero-figure img { max-width: 320px !important; }
+
+/* 7) Responsive : repasse les cartes en 1 colonne si écran étroit */
+@media (max-width: 720px){
+  .audience-grid { grid-template-columns: 1fr; gap: 20px; }
+  .audience-panel { max-width: 100%; }
+}
