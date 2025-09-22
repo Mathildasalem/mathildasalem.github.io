@@ -883,3 +883,20 @@ body > footer {
   padding-right: 80px !important;
   box-sizing: border-box;
 }
+
+/* ===============================
+   Alignement global des sections
+   =============================== */
+.page-container > section {
+  margin-left: 80px;
+  margin-right: 80px;
+  box-sizing: border-box;
+}
+
+/* Responsive : marges réduites sur mobile */
+@media (max-width: 768px) {
+  .page-container > section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
