@@ -444,3 +444,17 @@ h2::after {
 }
 /* Si tu passes à 2 cartes, remplace la règle ci-dessus par : */
 /* .audience-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } */
+
+/* Icônes plus grandes + plus d'air */
+.audience-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr)); /* 2 colonnes = + de place */
+  gap: 36px 44px;                                  /* vertical / horizontal */
+  justify-items: center;
+}
+.audience-card{ max-width: 280px; text-align:center; }
+.audience-icon img{
+  width: 80px !important;   /* était 64 : tu peux tester 72/80/88 */
+  height: auto !important;
+}
+.audience-card h3{ font-size: 1.05rem; }
