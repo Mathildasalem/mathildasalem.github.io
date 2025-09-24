@@ -964,3 +964,9 @@ body > *:not(header) { padding-left: var(--gutter) !important; padding-right: va
 .trustbar {
   margin-top: -25px;  /* environ 1,5 cm à l’écran */
 }
+
+/* Centrer la trustbar */
+.trustbar {
+  margin: 0 auto;         /* centre le bloc horizontalement */
+  display: table;         /* permet le centrage sans étirer en largeur */
+}
