@@ -993,3 +993,25 @@ body > *:not(header) { padding-left: var(--gutter) !important; padding-right: va
 
 /* sécurité: si une règle force display:block à 100%, on neutralise */
 .trustbar{ display: block; }
+
+/* TRUSTBAR — centrage blindé */
+.trustbar{
+  margin-top: -24px;                 /* ton décalage vertical */
+  width: max-content;                 /* largeur = contenu */
+  max-width: calc(100% - 40px);       /* évite de toucher les bords en mobile */
+  margin-left: auto !important;       /* centre le bloc */
+  margin-right: auto !important;
+  display: block !important;
+  padding: 8px 14px;                  /* respiration interne */
+}
+
+.trustbar ul{
+  list-style: none;                   /* retire les puces */
+  padding: 0;                         /* <<< enlève le padding gauche du UL qui décale */
+  margin: 0;                          /* reset marges UL */
+  display: inline-flex;               /* largeur au plus juste */
+  gap: 16px;                          /* espace entre items */
+  align-items: center;
+}
+
+.trustbar li{ white-space: nowrap; }  /* évite les retours bizarres */
