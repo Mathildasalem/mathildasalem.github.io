@@ -970,3 +970,26 @@ body > *:not(header) { padding-left: var(--gutter) !important; padding-right: va
   margin: 0 auto;         /* centre le bloc horizontalement */
   display: table;         /* permet le centrage sans étirer en largeur */
 }
+
+/* === TRUSTBAR : centrée visuellement === */
+.trustbar{
+  /* remonte un peu (ajuste si besoin) */
+  margin-top: -24px;
+
+  /* centrage robuste quel que soit le parent */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* la largeur s'adapte au contenu, mais ne dépasse pas l'écran */
+  width: max-content;
+  max-width: calc(100% - 40px);
+
+  /* respiration interne */
+  padding: 8px 16px;
+
+  /* garde ton style existant (bord, fond, rayon) : on ne modifie pas */
+}
+
+/* sécurité: si une règle force display:block à 100%, on neutralise */
+.trustbar{ display: block; }
