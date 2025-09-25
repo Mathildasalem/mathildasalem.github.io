@@ -1039,3 +1039,28 @@ body > *:not(header) { padding-left: var(--gutter) !important; padding-right: va
 @media (max-width: 900px){
   .hero-two-col{ grid-template-columns: 1fr; }
 }
+
+/* HERO en 2 colonnes : gauche = avatar, droite = carte services */
+.hero-two-col{
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 1fr; /* colonne gauche fixe, droite flexible */
+  gap: 40px;
+  align-items: start;
+}
+
+/* Colonne gauche : vertical, espacée */
+.hero-left{ display:flex; flex-direction:column; gap:16px; }
+.hero-figure img{ width:100%; height:auto; display:block; }
+
+/* Carte services (terracotta) */
+.audience-panel{
+  background:#fff6f2;
+  border-radius:12px;
+  padding:22px;
+  box-shadow:0 2px 6px rgba(0,0,0,.05);
+}
+
+/* Responsive : repasser en 1 colonne */
+@media (max-width: 900px){
+  .hero-two-col{ grid-template-columns: 1fr; }
+}
