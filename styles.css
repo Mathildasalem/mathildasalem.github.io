@@ -1015,3 +1015,27 @@ body > *:not(header) { padding-left: var(--gutter) !important; padding-right: va
 }
 
 .trustbar li{ white-space: nowrap; }  /* évite les retours bizarres */
+
+/* 2 colonnes : avatar à gauche, services à droite */
+.hero-two-col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Colonne gauche (avatar + bouton) bien vertical */
+.hero-left{ display: flex; flex-direction: column; gap: 16px; }
+
+/* Bloc services (la carte terracotta) */
+.audience-panel{
+  background: #fff6f2;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+}
+
+/* Responsive : repasser en 1 colonne sur mobile */
+@media (max-width: 900px){
+  .hero-two-col{ grid-template-columns: 1fr; }
+}
