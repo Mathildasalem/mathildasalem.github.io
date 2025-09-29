@@ -1134,3 +1134,26 @@ body > *:not(header) { padding-left: var(--gutter) !important; padding-right: va
 .hero-figure{ margin: 0 !important; }
 .hero-left > *:first-child{ margin-top: 0 !important; } /* H1 */
 .audience-panel h2{ margin-top: 0 !important; }
+
+/* === Aligner le bloc "À qui s’adressent…" sur le haut de l'avatar === */
+.page-container .hero-two-col{
+  display: grid !important;
+  grid-template-columns: minmax(280px,360px) 1fr !important;
+  column-gap: 40px !important;
+  align-items: start !important;
+}
+
+/* Décale le panneau de droite pour qu'il commence au niveau du haut de l'avatar */
+.page-container .hero-two-col .audience-panel{
+  margin-top: 96px !important;   /* ← ajuste si besoin : 80 / 88 / 104px */
+}
+
+/* Sur mobile on annule l’offset */
+@media (max-width: 900px){
+  .page-container .hero-two-col{
+    grid-template-columns: 1fr !important;
+  }
+  .page-container .hero-two-col .audience-panel{
+    margin-top: 16px !important;
+  }
+}
