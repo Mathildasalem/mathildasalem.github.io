@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- HEADER -->
   <header>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
-      <nav>
-        <a href="index.html">Accueil</a>
+    <div class="container">
+      <nav class="topnav">
+        <a class="active" href="index.html">Accueil</a>
         <a href="services.html">Services</a>
         <a href="qui-suis-je.html">Qui suis-je ?</a>
         <a href="contact.html">Contact</a>
@@ -19,50 +20,62 @@
     </div>
   </header>
 
-  <main class="container">
-    <section>
-      
-<section class="trustbar">
-  <ul>
-    <li>✅ Réactive & fiable</li>
-    <li>🔒 Confidentialité</li>
-    <li>💬 WhatsApp / Email / Visio</li>
-    <li>📍 Antibes & à distance</li>
-  </ul>
-</section>
-      
-      <h1>Contact</h1>
-      <p>Échange gratuit de 15 minutes pour cerner vos besoins et proposer une solution simple.</p>
+  <!-- CONTENU -->
+  <div class="page-container">
 
-      <div class="contact-card" style="background:#fff;padding:20px;border-radius:10px;margin:20px 0;">
-        <p>📍 Basée à Antibes — Disponible à distance</p>
-        <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a></p>
-        <p>📞 <a href="tel:+33763642292">07 63 64 22 92</a></p>
-        <p>💬 <a class="whatsapp" target="_blank" href="https://wa.me/33763642292">Me contacter sur WhatsApp</a></p>
+    <!-- HERO = 2 colonnes : gauche (portrait+cta) / droite (services) -->
+    <section class="hero-two-col">
+      <div class="hero-left">
+        <h1>Votre alliée administrative — localement &amp; à distance</h1>
+        <p>Antibes &amp; environs · Déléguez l’administratif, retrouvez du temps pour l’essentiel.</p>
+
+        <figure class="hero-figure">
+          <img src="assets/portrait.jpg" alt="Portrait de Mathilda Salem">
+        </figure>
+
+        <a class="btn-primary" href="contact.html">Discutons de vos besoins</a>
       </div>
 
-      <!-- Formulaire simple par mail (ouvre votre logiciel de messagerie) -->
-      <form action="mailto:mathilda.salem@outlook.com" method="post" enctype="text/plain" style="max-width:520px">
-        <label>Votre nom<br><input type="text" name="name" required></label><br><br>
-        <label>Votre email<br><input type="email" name="email" required></label><br><br>
-        <label>Message<br><textarea name="message" rows="6" placeholder="Décrivez brièvement votre besoin…"></textarea></label><br><br>
-        <button type="submit" class="btn">Envoyer</button>
-      </form>
-
-      <p style="margin-top:14px;font-size:.95rem;opacity:.8">
-        Astuce : si vous préférez, écrivez-moi directement à
-        <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a>
-        ou sur WhatsApp.
-      </p>
+      <aside class="audience-panel">
+        <h2>À qui s’adressent mes services&nbsp;?</h2>
+        <div class="audience-grid">
+          <!-- Carte 1 -->
+          <div class="audience-card">
+            <div class="audience-icon">
+              <img src="assets/particuliers.svg" alt="">
+            </div>
+            <h3>Particuliers</h3>
+            <p>Un accompagnement fiable pour garder le cap sur vos priorités.</p>
+          </div>
+          <!-- Carte 2 -->
+          <div class="audience-card">
+            <div class="audience-icon">
+              <img src="assets/pros.svg" alt="">
+            </div>
+            <h3>Professionnels</h3>
+            <p>Indépendants, TPE &amp; PME, Start’Up — un accompagnement fiable.</p>
+          </div>
+        </div>
+      </aside>
     </section>
-  </main>
 
-  <footer>
-    <div class="container">
+    <!-- TRUSTBAR -->
+    <section class="trustbar">
+      <ul>
+        <li>✅ Réactive &amp; fiable</li>
+        <li>🔒 Confidentialité</li>
+        <li>💬 WhatsApp · Email · Visio</li>
+        <li>📍 Antibes &amp; à distance</li>
+      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
       <p>📍 Basée à Antibes — Disponible à distance</p>
-      <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a> | 📞 07 63 64 22 92</p>
+      <p>✉️ <a href="mailto:mathilda.salem@outlook.com">mathilda.salem@outlook.com</a> · 📞 07&nbsp;63&nbsp;64&nbsp;22&nbsp;92</p>
       <p>👉 <a href="contact.html">Aller à la page Contact</a></p>
-    </div>
-  </footer>
+    </footer>
+
+  </div>
 </body>
 </html>
