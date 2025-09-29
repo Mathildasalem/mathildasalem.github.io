@@ -1118,3 +1118,19 @@ body > *:not(header) { padding-left: var(--gutter) !important; padding-right: va
 .trustbar ~ :not(footer) {
   display: none !important;
 }
+
+/* ===== OVERRIDE FINAL — HERO ALIGN TOP ===== */
+.page-container .hero-two-col{
+  display: grid !important;
+  grid-template-columns: minmax(280px,360px) 1fr !important; /* gauche = avatar, droite = bloc */
+  column-gap: 40px !important;
+  align-items: start !important;  /* <<< aligne les sommets */
+}
+
+/* neutralise les petits décalages de marge */
+.hero-left,
+.audience-panel{ margin-top: 0 !important; }
+
+.hero-figure{ margin: 0 !important; }
+.hero-left > *:first-child{ margin-top: 0 !important; } /* H1 */
+.audience-panel h2{ margin-top: 0 !important; }
