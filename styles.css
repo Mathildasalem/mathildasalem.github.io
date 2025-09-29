@@ -1064,3 +1064,52 @@ body > *:not(header) { padding-left: var(--gutter) !important; padding-right: va
 @media (max-width: 900px){
   .hero-two-col{ grid-template-columns: 1fr; }
 }
+
+/* HERO : 2 colonnes harmonisées */
+.hero-two-col{
+  display: grid !important;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.hero-left{ display:flex; flex-direction:column; gap:16px; }
+.hero-figure{ margin:0; }
+.hero-figure img{ width:100%; height:auto; display:block; border-radius:8px; }
+
+/* Bouton correct (pas pleine largeur) */
+.btn-primary{
+  display:inline-block !important;
+  width:auto !important;
+  align-self:flex-start;
+  margin-top:8px;
+  padding:12px 18px;
+  border-radius:10px;
+  background:#c85f45; color:#fff; text-decoration:none;
+}
+
+/* Carte services (terracotta clair) */
+.audience-panel{
+  background:#fff3ed;
+  border-radius:12px;
+  padding:24px;
+  box-shadow:0 2px 6px rgba(0,0,0,.06);
+}
+.audience-grid{ display:grid; grid-template-columns:repeat(2, minmax(160px,1fr)); gap:24px; }
+
+/* Trustbar centrée */
+.trustbar{
+  margin-top:16px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  display:table !important;
+  padding:8px 14px;
+}
+.trustbar ul{ list-style:none; margin:0; padding:0; display:inline-flex; gap:16px; align-items:center; }
+.trustbar li{ white-space:nowrap; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero-two-col{ grid-template-columns:1fr; }
+  .btn-primary{ align-self:stretch; text-align:center; }
+  .audience-grid{ grid-template-columns:1fr; }
+}
