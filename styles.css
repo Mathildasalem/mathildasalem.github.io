@@ -1113,3 +1113,8 @@ body > *:not(header) { padding-left: var(--gutter) !important; padding-right: va
   .btn-primary{ align-self:stretch; text-align:center; }
   .audience-grid{ grid-template-columns:1fr; }
 }
+
+/* Cache tout le contenu après la trustbar, sauf le footer */
+.trustbar ~ :not(footer) {
+  display: none !important;
+}
