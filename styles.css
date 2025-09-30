@@ -1157,3 +1157,51 @@ body > *:not(header) { padding-left: var(--gutter) !important; padding-right: va
     margin-top: 16px !important;
   }
 }
+
+/* === HERO : titre + intro sur toute la largeur, 2 colonnes dessous === */
+.page-container .hero-two-col{
+  display: grid !important;
+  grid-template-columns: minmax(280px,360px) 1fr !important; /* gauche avatar, droite services */
+  column-gap: 40px !important;
+  row-gap: 16px !important;
+  align-items: start !important;
+}
+
+/* Astuce : on "ouvre" hero-left pour positionner ses enfants dans la grille parente */
+.page-container .hero-two-col .hero-left{
+  display: contents !important;
+}
+
+/* Le H1 + le paragraphe d’intro prennent la ligne 1 sur TOUTE la largeur */
+.page-container .hero-two-col .hero-left > h1,
+.page-container .hero-two-col .hero-left > p{
+  grid-column: 1 / -1 !important;
+  margin-top: 0 !important;
+}
+
+/* La photo + le bouton restent en colonne 1 (gauche) */
+.page-container .hero-two-col .hero-figure,
+.page-container .hero-two-col .btn-primary{
+  grid-column: 1 !important;
+}
+
+/* Le bloc "À qui s’adressent…" passe en colonne 2 (droite), aligné en haut de l’avatar */
+.page-container .hero-two-col .audience-panel{
+  grid-column: 2 !important;
+  align-self: start !important;
+  margin-top: 0 !important;   /* on annule tout offset précédent */
+}
+
+/* Mobile : repasse en 1 colonne */
+@media (max-width: 900px){
+  .page-container .hero-two-col{
+    grid-template-columns: 1fr !important;
+  }
+  .page-container .hero-two-col .hero-left > h1,
+  .page-container .hero-two-col .hero-left > p{
+    grid-column: 1 / -1 !important;
+  }
+  .page-container .hero-two-col .audience-panel{
+    grid-column: 1 !important;
+  }
+}
